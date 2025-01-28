@@ -11,5 +11,6 @@ status=true;
 i =0;
 // event biding
 add(){this.i++;console.log("salut"); this.name=" clicked "+this.i;}
+remove(){this.i--;console.log("salut"); this.name=" clicked "+this.i;}
 
 }
