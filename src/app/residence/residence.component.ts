@@ -18,6 +18,13 @@ export class ResidenceComponent {
     {id:4,"name": "El Anber","address":"inconnu",
     "image":"../../assets/images/img.png", status: "En Construction"}
     ];
+   showlocation(address:string)
+   {
+    // alert is the pop up
+    if (address.toLowerCase().match("inconnu"))
+      alert('⚠️ Error: l’adresse de cette résidence est  inconnue !');
+    else alert('adresse : '+address);
+   }
      }
 
 
