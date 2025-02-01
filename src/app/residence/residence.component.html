@@ -4,6 +4,7 @@
       <th>Id</th>
       <th>Name</th>
       <th>Status</th>
+      <th>icons</th>
       <th>Image</th>
       <th>Actions</th>
     </tr>
@@ -14,6 +15,14 @@
       <td>{{residence.id}}</td>
       <td>{{residence.name}}</td>
       <td>{{residence.status}}</td>
+      <td>
+        <!-- i dont like using 3 ifs but this is all i found to not use ngSwitchCase -->
+        <div *ngIf="residence.status === 'Disponible'">🔓 </div>  
+        <div *ngIf="residence.status === 'Vendu'">💸 </div>
+        <div *ngIf="residence.status === 'En Construction'">🚧 </div>
+      </td>
+      
+      
       <td><img [src]=residence.image width="50"></td> <!-- using the data binging-->
       <td>
         <div class="btn-group">
