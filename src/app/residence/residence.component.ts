@@ -49,6 +49,13 @@ export class ResidenceComponent {
     else if (id >-1 && !this.res.liked) this.favoris.splice(id,1);
     return this.favoris;
    }
+   delete(resdel:Residence)
+   {
+    this.listResidences.splice(this.listResidences.findIndex((value) => value === resdel),1);
+    this.res =resdel;
+    this.res.liked=false;
+    this.searchText ="";
+   }
      }
 
 

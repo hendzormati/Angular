@@ -1,5 +1,5 @@
 <form class="d-flex" role="search">
-  <input class="form-control me-2" type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search">
+  <input class="form-control me-2" type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search by name">
 </form>
 <h3>Liste Des Résidences</h3>
 <table class="table table-striped">
@@ -32,7 +32,7 @@
         <div class="btn-group">
         <button class="btn btn-secondary" (click)="showlocation(residence.address)">Show Location</button>
         <button class="btn btn-success" (click)="getres(residence)">Favoris</button>
-        <button class="btn btn-danger">Delete</button>
+        <button class="btn btn-danger" (click)=" delete(residence)">Delete</button>
       </div>
       </td>
     </tr>
