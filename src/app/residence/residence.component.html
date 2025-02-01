@@ -1,3 +1,7 @@
+<form class="d-flex" role="search">
+  <input class="form-control me-2" type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search">
+</form>
+<h3>Liste Des Résidences</h3>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -11,7 +15,7 @@
   </thead>
   <tbody>
     <!-- boucle for same as for each made for listResidence-->
-    <tr *ngFor="let residence of listResidences" >
+    <tr *ngFor="let residence of list()" >
       <td>{{residence.id}}</td>
       <td>{{residence.name}}</td>
       <td>{{residence.status}}</td>
@@ -27,9 +31,27 @@
       <td>
         <div class="btn-group">
         <button class="btn btn-secondary" (click)="showlocation(residence.address)">Show Location</button>
+        <button class="btn btn-success" (click)="getres(residence)">Favoris</button>
         <button class="btn btn-danger">Delete</button>
       </div>
       </td>
     </tr>
-    
-     </tbody>
+  </tbody>
+ </table> 
+ <h3>Liste Des Favoris</h3>
+<h6>added attribut liked f residence 🤭</h6>
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- boucle for same as for each made for listResidence-->
+    <tr *ngFor="let residence of favlist()" >
+      <td>{{residence.id}}</td>
+      <td>{{residence.name}}</td>
+    </tr>
+  </tbody>
+ </table> 
