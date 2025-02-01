@@ -1,0 +1,27 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Address</th>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- boucle for same as for each made for listResidence-->
+    <tr *ngFor="let residence of listResidences" >
+      <td>{{residence.id}}</td>
+     <td>{{residence.address}}</td>
+      <td>{{residence.name}}</td>
+      <td>{{residence.status}}</td>
+      <td><img [src]=residence.image width="50"></td> <!-- using the data binging-->
+      <td>
+        <div class="btn-group">
+        <button class="btn btn-secondary">Show Location</button>
+        <button class="btn btn-danger">Delete</button>
+      </div>
+      </td>
+    </tr>
+  </tbody>

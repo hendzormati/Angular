@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-name="my home"; //interpolation
+name="hend"; //interpolation
+text="";
 status=true;
 i =0;
 // event biding
-add(){this.i++;console.log("salut"); this.name=" clicked "+this.i;}
-remove(){this.i--;console.log("salut"); this.name=" clicked "+this.i;}
-
+add(){this.i++; this.text=" clicked "+this.i;}
+remove(){this.i--;this.text=" clicked "+this.i;}
 }

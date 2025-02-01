@@ -1,4 +1,6 @@
+<p>{{text}} works!</p>
 <p>{{name}} works!</p>
+
 <br>
 <hr>
 <br>
@@ -7,6 +9,7 @@
 <hr>
 <br>
 <button class="btn btn-secondary" (click)="add()">add</button>
-<button class="btn btn-secondary" (click)="remove()">remove</button>
-
-
+<button class="btn btn-secondary" (mouseenter)="remove()">enter to remove </button>
+<br>
+<br>
+<input type="text" [(ngModel)]="name">
