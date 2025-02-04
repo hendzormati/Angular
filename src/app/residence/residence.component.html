@@ -7,23 +7,22 @@
     <div class="card-header">{{residence.id}}</div>
     <div class="card-body ">
       <h5 class="card-title">{{residence.name}}</h5>
-      <img [src]=residence.image width="250"style="margin-bottom: 20px;"><!-- using the data binging-->
+      <img [src]=residence.image width="200"style="margin-bottom: 20px;"><!-- using the data binging-->
       <div class="btn-group" >
         <button class="btn btn-secondary" (click)="showlocation(residence.address)">Show Location</button>
-        <button class="btn btn-success" (click)="getres(residence)">Favoris</button>
+        <button class="btn btn-success" (click)="getresidence(residence)">Favoris</button>
         <button class="btn btn-danger" (click)=" delete(residence)">Delete</button>
       </div>
     </div>
     <div class="card-footer text-muted ">  <div class="card-text">{{residence.status}} 
           <!-- i dont like using 3 ifs but this is all i found to not use ngSwitchCase -->
-          <span *ngIf="residence.status === 'Disponible'">🔓 </span>  
-          <span *ngIf="residence.status === 'Vendu'">💸 </span>
-          <span *ngIf="residence.status === 'En Construction'">🚧 </span>
+          <span *ngIf="residence.status === 'Disponible'"><i class="fa-solid fa-house-medical-circle-check"></i> </span>  
+          <span *ngIf="residence.status === 'Vendu'"><i class="fa-solid fa-house-medical-circle-xmark"></i> </span>
+          <span *ngIf="residence.status === 'En Construction'"><i class="fa-solid fa-person-digging"></i> </span>
       </div> </div>
   </div>
 </div>
  <h3>Liste Des Favoris</h3>
-<h6>added attribut liked f residence 🤭</h6>
  <table class="table table-striped">
   <thead>
     <tr>
@@ -33,7 +32,7 @@
   </thead>
   <tbody>
     <!-- boucle for same as for each made for listResidence-->
-    <tr *ngFor="let residence of favlist()" >
+    <tr *ngFor="let residence of favoritelist()" >
       <td>{{residence.id}}</td>
       <td>{{residence.name}}</td>
     </tr>

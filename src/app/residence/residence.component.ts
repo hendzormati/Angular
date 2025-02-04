@@ -8,15 +8,15 @@ import { Residence } from 'src/core/models/Residence';
 export class ResidenceComponent {
   listResidences:Residence[]=[
     {id:1,"name": "El fel","address":"Borj Cedria",
-    "image":"../../assets/images/img.png", status: "Disponible",liked:false},
+    "image":"../../assets/images/img.png", status: "Disponible"},
     {id:2,"name": "El yasmine",
     "address":"Ezzahra","image":"../../assets/images/img.png", status:
-    "Disponible" ,liked:false},
+    "Disponible" },
     {id:3,"name": "El Arij",
     "address":"Rades","image":"../../assets/images/img.png", status:
-    "Vendu",liked:false},
+    "Vendu"},
     {id:4,"name": "El Anber","address":"inconnu",
-    "image":"../../assets/images/img.png", status: "En Construction",liked:false}
+    "image":"../../assets/images/img.png", status: "En Construction"}
     ];
     favoris:Residence[]=[];
    showlocation(address:string)
@@ -33,28 +33,32 @@ export class ResidenceComponent {
    {
     return this.listResidences.filter((value) => value.name.toLowerCase().includes(this.searchText.toLowerCase()));
    }
-   getres(residence:Residence)
-   {
-    this.res=residence;
-    this.res.liked=!this.res.liked;
-   }
-   favlist()
-   { 
-    let id = this.favoris.findIndex((value) => value.name === this.res.name);
-    //console.log('id ',id,'length ',this.favoris.length,' res id ',this.res.id)
-    if(id === -1 && this.res.id!=null &&this.res.liked)
-      this.favoris.push(this.res);
-    else if (id >-1 && !this.res.liked) this.favoris.splice(id,1);
-    return this.favoris;
-   }
-   
    delete(resdel:Residence)
    {
     this.listResidences.splice(this.listResidences.findIndex((value) => value === resdel),1);
     this.res =resdel;
-    this.res.liked=false;
+    this.clicked = true;
     this.searchText ="";
    }
+   clicked = false;
+   getresidence(residence:Residence)
+   {
+    this.res=residence;
+    this.clicked = true;
+   }
+   favoritelist()
+   { 
+    let id = this.favoris.findIndex((value) => value.name === this.res.name);
+    //console.log('id ',id,'length ',this.favoris.length,' res id ',this.res.id)
+    if(this.clicked)
+    {if(id === -1)
+      this.favoris.push(this.res);
+    else this.favoris.splice(id,1);
+    this.clicked = false;
+    }
+    return this.favoris;
+   }
+
      }
 
 
