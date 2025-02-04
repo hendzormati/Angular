@@ -28,17 +28,15 @@ export class ResidenceComponent {
    }
    res = new Residence();
    state=true;
+   searchText ="";
+   list()
+   {
+    return this.listResidences.filter((value) => value.name.toLowerCase().includes(this.searchText.toLowerCase()));
+   }
    getres(residence:Residence)
    {
     this.res=residence;
     this.res.liked=!this.res.liked;
-   }
-   searchText ="";
-   list()
-   {
-    let l=this.listResidences.filter((value) => value.name.toLowerCase().includes(this.searchText.toLowerCase()));
-    //console.log(' search ',this.searchText , l.length);
-    return l;
    }
    favlist()
    { 
@@ -49,6 +47,7 @@ export class ResidenceComponent {
     else if (id >-1 && !this.res.liked) this.favoris.splice(id,1);
     return this.favoris;
    }
+   
    delete(resdel:Residence)
    {
     this.listResidences.splice(this.listResidences.findIndex((value) => value === resdel),1);

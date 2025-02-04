@@ -1,43 +1,27 @@
-<form class="d-flex" role="search">
+<form class="d-flex" role="search" style="margin-bottom: 30px;">
   <input class="form-control me-2" type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search by name">
 </form>
 <h3>Liste Des Résidences</h3>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Status</th>
-      <th>icons</th>
-      <th>Image</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- boucle for same as for each made for listResidence-->
-    <tr *ngFor="let residence of list()" >
-      <td>{{residence.id}}</td>
-      <td>{{residence.name}}</td>
-      <td>{{residence.status}}</td>
-      <td>
-        <!-- i dont like using 3 ifs but this is all i found to not use ngSwitchCase -->
-        <div *ngIf="residence.status === 'Disponible'">🔓 </div>  
-        <div *ngIf="residence.status === 'Vendu'">💸 </div>
-        <div *ngIf="residence.status === 'En Construction'">🚧 </div>
-      </td>
-      
-      
-      <td><img [src]=residence.image width="50"></td> <!-- using the data binging-->
-      <td>
-        <div class="btn-group">
+<div class="card-group" style="margin-bottom: 50px;">
+  <div class="card text-center" *ngFor="let residence of list()">
+    <div class="card-header">{{residence.id}}</div>
+    <div class="card-body ">
+      <h5 class="card-title">{{residence.name}}</h5>
+      <img [src]=residence.image width="250"style="margin-bottom: 20px;"><!-- using the data binging-->
+      <div class="btn-group" >
         <button class="btn btn-secondary" (click)="showlocation(residence.address)">Show Location</button>
         <button class="btn btn-success" (click)="getres(residence)">Favoris</button>
         <button class="btn btn-danger" (click)=" delete(residence)">Delete</button>
       </div>
-      </td>
-    </tr>
-  </tbody>
- </table> 
+    </div>
+    <div class="card-footer text-muted ">  <div class="card-text">{{residence.status}} 
+          <!-- i dont like using 3 ifs but this is all i found to not use ngSwitchCase -->
+          <span *ngIf="residence.status === 'Disponible'">🔓 </span>  
+          <span *ngIf="residence.status === 'Vendu'">💸 </span>
+          <span *ngIf="residence.status === 'En Construction'">🚧 </span>
+      </div> </div>
+  </div>
+</div>
  <h3>Liste Des Favoris</h3>
 <h6>added attribut liked f residence 🤭</h6>
  <table class="table table-striped">
