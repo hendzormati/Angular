@@ -19,6 +19,10 @@ export class ResidenceComponent {
     "image":"../../assets/images/img.png", status: "En Construction"}
     ];
     favoris:Residence[]=[];
+    res = new Residence();
+    state=true;
+    searchText ="";
+    clicked = false;
    showlocation(address:string)
    {
     // alert is the pop up
@@ -26,9 +30,6 @@ export class ResidenceComponent {
       alert('⚠️ Error: l’adresse de cette résidence est  inconnue !');
     else alert('adresse : '+address);
    }
-   res = new Residence();
-   state=true;
-   searchText ="";
    list()
    {
     return this.listResidences.filter((value) => value.name.toLowerCase().includes(this.searchText.toLowerCase()));
@@ -40,11 +41,14 @@ export class ResidenceComponent {
     this.clicked = true;
     this.searchText ="";
    }
-   clicked = false;
    getresidence(residence:Residence)
    {
     this.res=residence;
     this.clicked = true;
+   }
+   isclicked(id:number)
+   {
+    return this.favoris.some((value) => value.id === id);
    }
    favoritelist()
    { 
