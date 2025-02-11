@@ -23,6 +23,7 @@ export class ResidenceComponent {
     state=true;
     searchText ="";
     clicked = false;
+    deleted = false;
    showlocation(address:string)
    {
     // alert is the pop up
@@ -39,6 +40,7 @@ export class ResidenceComponent {
     this.listResidences.splice(this.listResidences.findIndex((value) => value === resdel),1);
     this.res =resdel;
     this.clicked = true;
+    this.deleted = true;
     this.searchText ="";
    }
    getresidence(residence:Residence)
@@ -53,11 +55,15 @@ export class ResidenceComponent {
    favoritelist()
    { 
     let id = this.favoris.findIndex((value) => value.name === this.res.name);
-    //console.log('id ',id,'length ',this.favoris.length,' res id ',this.res.id)
+    console.log('id ',id,'length ',this.favoris.length,' res id ',this.res.id)
     if(this.clicked)
-    {if(id === -1)
-      this.favoris.push(this.res);
-    else this.favoris.splice(id,1);
+    {
+      if(id === -1 && !this.deleted )
+        this.favoris.push(this.res);
+      else 
+        if(id != -1)  
+          this.favoris.splice(id,1);
+    this.deleted=false;
     this.clicked = false;
     }
     return this.favoris;
