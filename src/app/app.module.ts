@@ -4,12 +4,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResidenceComponent } from './residence/residence.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AnnonceModule } from './annonce/annonce/annonce.module';
 import { NavModule } from './nav/nav/nav.module';
+import { FormResidenceComponent } from './form-residence/form-residence.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavModule } from './nav/nav/nav.module';
     FooterComponent,
     ResidenceComponent,
     NotfoundComponent,
+    FormResidenceComponent,
     
   ],
   imports: [
@@ -26,7 +28,8 @@ import { NavModule } from './nav/nav/nav.module';
     FormsModule,
     AppRoutingModule,
     AnnonceModule,
-    NavModule
+    NavModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
