@@ -1,12 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Residence } from 'src/core/models/Residence';
+import { ResidenceService } from '../service/residence.service';
+
 @Component({
   selector: 'app-residence',
   templateUrl: './residence.component.html',
   styleUrls: ['./residence.component.css']
 })
-export class ResidenceComponent {
-  listResidences:Residence[]=[
+export class ResidenceComponent implements OnInit {
+  num!:any;
+  constructor(private resService:ResidenceService){
+  }
+  listResidences:Residence[]=[];
+  ngOnInit(): void {
+    this.resService.getallresidence().subscribe((data)=> {this.listResidences = data});
+  }
+  shownumber(){
+    this.num=this.resService.getSameValueOf(this.listResidences,"id","1");
+  }
+  listResidencesOLD:Residence[]=[
     {id:1,"name": "El fel","address":"Borj Cedria",
     "image":"../../assets/images/img.png", status: "Disponible"},
     {id:2,"name": "El yasmine",

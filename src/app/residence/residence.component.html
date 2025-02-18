@@ -1,6 +1,8 @@
 <form class="d-flex" role="search" style="margin-bottom: 30px;">
   <input class="form-control me-2" type="text" [(ngModel)]="searchText" name="searchText" placeholder="Search by name">
 </form>
+<button class="btn btn-danger" (click)="shownumber()">Show number</button>
+<h3 >  {{num}}</h3>
 <h3>Liste Des Résidences</h3>
 <div class="card-group" style="margin-bottom: 50px;">
   <div class="card text-center" *ngFor="let residence of list()">

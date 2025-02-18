@@ -1,0 +1,6 @@
+{
+    "residence":[
+        {"id":1,"name": "El fel","address":"Borj Cedria",
+    "image":"../../assets/images/img.png", "status": "Disponible"}
+    ]
+}
