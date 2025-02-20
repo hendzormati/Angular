@@ -47,13 +47,18 @@ export class ResidenceComponent implements OnInit {
    {
     return this.listResidences.filter((value) => value.name.toLowerCase().includes(this.searchText.toLowerCase()));
    }
-   delete(resdel:Residence)
+   deleteOLD(resdel:Residence)
    {
     this.listResidences.splice(this.listResidences.findIndex((value) => value === resdel),1);
     this.res =resdel;
     this.clicked = true;
     this.deleted = true;
     this.searchText ="";
+   }
+   delete(resdel:Residence)
+   {
+    this.resService.deleteres(resdel.id).subscribe(()=>{console.log("deleted")});
+    this.ngOnInit();
    }
    getresidence(residence:Residence)
    {

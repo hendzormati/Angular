@@ -7,7 +7,7 @@ import { Residence } from 'src/core/models/Residence';
   providedIn: 'root'
 })
 export class ResidenceService {
-
+  url="http://localhost:3000/residence";
   constructor( private http:HttpClient) { }
 
   getSameValueOf(list: any[], critiria: any, value: any){
@@ -20,6 +20,22 @@ export class ResidenceService {
   }
   getallresidence():Observable<Residence[]>
   {
-    return this.http.get<Residence[]>("http://localhost:3000/residence");
+    return this.http.get<Residence[]>(this.url);
+  }
+  addres(res : Residence)
+  {
+    return this.http.post<Residence[]>(this.url,res);
+  }
+  deleteres(id:any)
+  {
+    return this.http.delete<Residence[]>(this.url+"/"+id);
+  }
+  updateres(res:Residence,id:any)
+  {
+    return this.http.put<Residence[]>(this.url+"/"+id,res);
+  }
+  showres(id:any)
+  {
+    return this.http.get<Residence[]>(this.url+"/"+id);
   }
 }
