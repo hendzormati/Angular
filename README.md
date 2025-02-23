@@ -2,14 +2,14 @@
 
 Welcome to the **Angular** repository! This project is part of my workshop series for learning **Angular** and how to build a frontend application that integrates with a **Spring Boot** backend.
 
-This repository serves as the foundation for the frontend, and the **Spring Boot repository** can be found here: [SpringBoot Repository](https://github.com/hendzormati/SpringBoot).
+<!--This repository serves as the foundation for the frontend, and the **Spring Boot repository** can be found here: [SpringBoot Repository](https://github.com/hendzormati/SpringBoot).-->
 
 ## Repository Traffic Overview
 
 Here's the traffic overview for this repository:
 
-- 👁️ **Total Views** Since Creation: **76** views
-- 🔄 **Total Clones** Since Creation: **18** clones
+- 👁️ **Total Views** Since Creation: **** views
+- 🔄 **Total Clones** Since Creation: **** clones
 
 ---
 
