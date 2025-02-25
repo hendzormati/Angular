@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ResidenceService } from '../service/residence.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-residence',
@@ -9,6 +11,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class FormResidenceComponent implements OnInit {
 
  formR!:FormGroup;
+ constructor(private service:ResidenceService, private router:Router){}
  ngOnInit(): void {
   this.formR= new FormGroup({
     id:new FormControl('',[Validators.required,Validators.minLength(2)]),
@@ -21,7 +24,9 @@ export class FormResidenceComponent implements OnInit {
 get status(){ return this.formR.get('status');}
 add()
 {
-  console.log("input", JSON.stringify(this.formR.value));
+  this.service.addres(this.formR.value).subscribe(()=>
+  this.router.navigate(["/residence"])
+  );
 
   
   
