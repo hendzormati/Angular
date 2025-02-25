@@ -1,28 +1,48 @@
-# AngularProject
+# Angular Repository
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Welcome to the **Angular** repository! This project is part of my workshop series for learning **Angular** and how to build a frontend application that integrates with a **Spring Boot** backend.
 
-## Development server
+<!--This repository serves as the foundation for the frontend, and the **Spring Boot repository** can be found here: [SpringBoot Repository](https://github.com/hendzormati/SpringBoot).-->
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Repository Traffic Overview
 
-## Code scaffolding
+Here's the traffic overview for this repository:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 👁️ **Total Views** Since Creation: **29** views
+- 🔄 **Total Clones** Since Creation: **74** clones
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Last traffic data update: **Tue Feb 25 2025 02:19:36 CET**
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Project Overview
 
-## Running end-to-end tests
+This repository is designed for educational purposes to guide you through creating an **Angular frontend** that can interact with a **Spring Boot backend**. Through this workshop, you’ll learn:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- How to build components in Angular.
+- How to interact with backend services through REST APIs.
+- How to connect the frontend with the Spring Boot backend to form a full-stack application.
 
-## Further help
+### Repository Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# Angular" 
+- **src**: Contains the source code for the Angular frontend.
+- **angular.json**: Configuration file for Angular CLI.
+- **package.json**: Dependency configuration for the project.
+
+### Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/hendzormati/Angular.git
+   cd Angular
+   
+2. **Install dependencies**:
+   ```bash
+   npm install
+
+3. **Run the application**:
+   ```bash
+   ng serve
+The frontend will be available at **http://localhost:4200**
