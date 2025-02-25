@@ -12,6 +12,7 @@ import { AnnonceModule } from './annonce/annonce/annonce.module';
 import { NavModule } from './nav/nav/nav.module';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ResidenceDetailComponent } from './residence-detail/residence-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     ResidenceComponent,
     NotfoundComponent,
     FormResidenceComponent,
+    ResidenceDetailComponent,
     
   ],
   imports: [

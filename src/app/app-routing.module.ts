@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ResidenceComponent } from './residence/residence.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
+import { ResidenceDetailComponent } from './residence-detail/residence-detail.component';
 
 
 // routing
@@ -12,7 +13,8 @@ const routes:Routes=[
   {path:"home",component:HomeComponent},
   {path:"residence",component:ResidenceComponent},
   {path:"addresidence",component:FormResidenceComponent},
-  // always the last one 
+  {path:"residence/details/:id",component:ResidenceDetailComponent},
+  // always the last one  
   // {path:"**",component:NotfoundComponent},
 
 ]

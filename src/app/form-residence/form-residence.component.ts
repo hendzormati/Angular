@@ -22,6 +22,8 @@ get status(){ return this.formR.get('status');}
 add()
 {
   console.log("input", JSON.stringify(this.formR.value));
+
+  
   
 }
 }

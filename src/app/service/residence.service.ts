@@ -24,18 +24,18 @@ export class ResidenceService {
   }
   addres(res : Residence)
   {
-    return this.http.post<Residence[]>(this.url,res);
+    return this.http.post<Residence>(this.url,res);
   }
   deleteres(id:any)
   {
-    return this.http.delete<Residence[]>(this.url+"/"+id);
+    return this.http.delete<Residence>(this.url+"/"+id);
   }
   updateres(res:Residence,id:any)
   {
-    return this.http.put<Residence[]>(this.url+"/"+id,res);
+    return this.http.put<Residence>(this.url+"/"+id,res);
   }
   showres(id:any)
   {
-    return this.http.get<Residence[]>(this.url+"/"+id);
+    return this.http.get<Residence>(this.url+"/"+id);
   }
 }

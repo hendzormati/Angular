@@ -1,0 +1,17 @@
+<div class="card-group" style="margin-bottom: 50px;">
+    <div class="card text-center" >
+      <div class="card-header">{{residence.id}}</div>
+      <div class="card-body ">
+        <h5 class="card-title">{{residence.name}}</h5>
+        <h5 class="card-title">{{residence.address}}</h5>
+        <img [src]=residence.image width="200"style="margin-bottom: 20px;"><!-- using the data binging-->
+        
+      </div>
+      <div class="card-footer text-muted ">  <div class="card-text">{{residence.status}} 
+            <!-- i dont like using 3 ifs but this is all i found to not use ngSwitchCase -->
+            <span *ngIf="residence.status === 'Disponible'"><i class="fa-solid fa-house-medical-circle-check"></i> </span>  
+            <span *ngIf="residence.status === 'Vendu'"><i class="fa-solid fa-house-medical-circle-xmark"></i> </span>
+            <span *ngIf="residence.status === 'En Construction'"><i class="fa-solid fa-person-digging"></i> </span>
+        </div> </div>
+    </div>
+  </div>
