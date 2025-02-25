@@ -2,10 +2,10 @@
   "residence": [
     {
       "id": "1",
-      "name": "El fel",
-      "address": "Borj Cedria",
+      "name": "Updated",
+      "address": "Borj Ced",
       "image": "../../assets/images/img.png",
-      "status": "Disponible"
+      "status": "disponnible"
     },
     {
       "id": "2",

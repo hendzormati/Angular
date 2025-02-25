@@ -11,7 +11,7 @@
       <h5 class="card-title">{{residence.name}}</h5>
       <img [src]=residence.image width="200"style="margin-bottom: 20px;"><!-- using the data binging-->
       <div class="btn-group" >
-        <button class="btn btn-secondary" (click)="showlocation(residence.address)">Location</button>
+        <button class="btn btn-primary" [routerLink]="['update',residence.id]">Update</button>
         <button class="btn btn-secondary" [routerLink]="['details',residence.id]">Details</button>
 
         <button class="btn btn-success" (click)="getresidence(residence)">

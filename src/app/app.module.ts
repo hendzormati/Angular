@@ -13,6 +13,7 @@ import { NavModule } from './nav/nav/nav.module';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ResidenceDetailComponent } from './residence-detail/residence-detail.component';
+import { ResidenceUpdateComponent } from './residence-update/residence-update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { ResidenceDetailComponent } from './residence-detail/residence-detail.co
     NotfoundComponent,
     FormResidenceComponent,
     ResidenceDetailComponent,
+    ResidenceUpdateComponent,
     
   ],
   imports: [
