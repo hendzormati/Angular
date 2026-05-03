@@ -9,13 +9,13 @@ Welcome to the **Angular** repository! This project is part of my workshop serie
 Here's the traffic overview for this repository:
 
 - 👁️ **Total Views** Since Creation: **16** views
-- 🔄 **Total Clones** Since Creation: **142** clones
-- 📈 **Recent Views** (Last 14 days): **4** views
-- 📊 **Recent Clones** (Last 14 days): **27** clones
+- 🔄 **Total Clones** Since Creation: **166** clones
+- 📈 **Recent Views** (Last 14 days): **0** views
+- 📊 **Recent Clones** (Last 14 days): **51** clones
 
 ---
 
-Last traffic data update: **Sun Apr 26 2026 03:32:50 CET**
+Last traffic data update: **Sun May 03 2026 03:42:14 CET**
 
 ---
 
